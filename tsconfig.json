@@ -3,8 +3,9 @@
     "outDir": "dist",
     "target": "ES6",
     "module": "CommonJS",
-    "lib": ["es6"],
+    "lib": ["es6", "dom"],
     "sourceMap": true,
     "strict": true
-  }
+  },
+  "include": ["src/**/*"]
 }
