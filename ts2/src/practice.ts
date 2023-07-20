@@ -21,15 +21,47 @@
 // color = 'yellow';
 // color = 'green'; // 에러 발생!
 
-const sum = (x: number, y: number): number => {
-  return x + y;
-};
+// const sum = (x: number, y: number): number => {
+//   return x + y;
+// };
 
-console.log(sum(1, 2));
+// console.log(sum(1, 2));
 
-const sumArray = (numbers: number[]): number => {
-  return numbers.reduce((acc, current) => acc + current, 0);
-};
+// const sumArray = (numbers: number[]): number => {
+//   return numbers.reduce((acc, current) => acc + current, 0);
+// };
 
-const total = sumArray([1, 2, 3, 4, 5]);
-console.log(total);
+// const total = sumArray([1, 2, 3, 4, 5]);
+// console.log(total);
+
+interface Point {
+  x: number;
+  y: number;
+}
+
+function printPoint(p: Point) {
+  console.log(`${p.x}, ${p.y}`);
+}
+
+const point3 = { x: 12, y: 26, z: 89 };
+printPoint(point3); // prints "12, 26"
+
+const rect = { x: 33, y: 26, z: 89 };
+printPoint(rect); // prints "33, 3"
+
+const color = { hex: "#187ABF" };
+
+// printPoint(color); // X
+
+class VirtualPoint {
+  x: number;
+  y: number;
+
+  constructor(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+const newPoint = new VirtualPoint(13, 56);
+printPoint(newPoint); // prints "13, 56"
